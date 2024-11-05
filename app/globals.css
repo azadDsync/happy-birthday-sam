@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+            
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,11 +23,6 @@ body {
 
 .slackey-regular {
   font-family: "Slackey", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.rock-3d-regular {
-  font-family: "Rock 3D", system-ui;
   font-weight: 400;
   font-style: normal;
 }

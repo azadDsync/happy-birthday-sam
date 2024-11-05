@@ -17,10 +17,6 @@ export default function Candle() {
 
   return (
     <div className="relative w-full h-60">
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mansalva&family=Miltonian+Tattoo&family=Moirai+One&family=Offside&family=Rock+3D&family=Slackey&display=swap');
-      </style>
       <Image
         src="/closing-giff.gif"
         alt="Background Image"

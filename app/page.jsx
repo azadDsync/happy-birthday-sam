@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 import Candle from "./Candle";
 export default function Home() {
   const [output, setOutput] = useState("");
@@ -8,20 +8,16 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      set(true)
-    }, 5000);
+      set(true);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const startListening = () => {
     try {
-      if (
-        "webkitSpeechRecognition" in window ||
-        "SpeechRecognition" in window
-      ) {
-        const SpeechRecognition =
-          window.SpeechRecognition || window.webkitSpeechRecognition;
+      if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         const recognition = new SpeechRecognition();
         recognition.continuous = false;
         recognition.lang = "en-US";
@@ -36,8 +32,8 @@ export default function Home() {
           } else if (command.includes("show date")) {
             const date = new Date().toLocaleDateString();
             setOutput(`Today's date is ${date}`);
-          } else if (command.includes("foo" || "fooo" || "fu" || "who")) {
-            setOutput(`happy birthday Bro! `);
+          } else if (["foo", "fooo", "fu", "who"].some(word => command.includes(word))) {
+            setOutput("Happy birthday Bro!");
             set(true);
           } else {
             setOutput(`${command}"`);
@@ -58,7 +54,9 @@ export default function Home() {
       } else {
         alert("Sorry, your browser doesn't support the Web Speech API.");
       }
-    } catch (error) {}
+    } catch (error) {
+      console.error("Speech recognition error:", error);
+    }
   };
 
   return (
@@ -67,10 +65,7 @@ export default function Home() {
         <Candle />
       ) : (
         <div className="relative w-full h-60">
-          <style>
-            @import
-            url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mansalva&family=Miltonian+Tattoo&family=Moirai+One&family=Offside&family=Rock+3D&family=Slackey&display=swap');
-          </style>
+          
 
           <Image
             src="/opening-giff.gif"
@@ -78,16 +73,13 @@ export default function Home() {
             layout="responsive"
             width={1900}
             height={400}
-            placeholder="blur"
-            blurDataURL="/back.svg"
           />
 
-          <div className="slackey-regular absolute inset-0 flex items-center justify-center text-xl sm:text-3xl">
+          <div className="slackey-regular absolute inset-0 flex items-center justify-center text-xl sm:text-2xl">
             <button onClick={startListening}>
-              click it <br />
-              and "fooo" <br />
-              {/* {output} */}
+              click it and say foo
             </button>
+            <p>{output}</p>
           </div>
           <div className="bg-[#666466] text-center h-[400px]"></div>
         </div>
