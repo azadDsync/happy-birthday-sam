@@ -13,7 +13,7 @@ export default function Candle() {
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [router]);
 
   return (
     <div className="relative w-full h-60">

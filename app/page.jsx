@@ -1,18 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Candle from "./Candle";
 export default function Home() {
   const [output, setOutput] = useState("");
   const [get, set] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      set(true);
-    }, 15000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const startListening = () => {
     try {
@@ -52,6 +44,7 @@ export default function Home() {
         //   console.error("Error occurred in recognition:", event.error);
         // };
       } else {
+        set(true)
         alert("Sorry, your browser doesn't support the Web Speech API.");
       }
     } catch (error) {
