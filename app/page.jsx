@@ -75,7 +75,7 @@ export default function Home() {
             height={400}
           />
 
-          <div className="slackey-regular absolute inset-0 flex items-center justify-center text-xl sm:text-2xl">
+          <div className="font-title absolute inset-0 flex items-center justify-center text-xl sm:text-2xl">
             <button onClick={startListening}>
               click it and say foo
             </button>

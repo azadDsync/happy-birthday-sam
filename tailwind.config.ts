@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        title:["Slackey","serif"],
+        rock_3d:["Rock 3D","serif"],
+        mansalva:["Mansalva","serif"]
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

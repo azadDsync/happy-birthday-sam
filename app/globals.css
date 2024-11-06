@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mansalva&family=Miltonian+Tattoo&family=Moirai+One&family=Offside&family=Rock+3D&family=Slackey&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,7 +22,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.slackey-regular {
+/* .slackey-regular {
   font-family: "Slackey", serif;
   font-weight: 400;
   font-style: normal;
@@ -30,4 +31,4 @@ body {
   font-family: "Mansalva", serif;
   font-weight: 400;
   font-style: normal;
-}
+} */

@@ -26,7 +26,7 @@ export default function Candle() {
         placeholder="blur"
         blurDataURL="/back.svg"
       />
-      <div className="slackey-regular absolute inset-0 flex items-center justify-center text-xl sm:text-3xl">
+      <div className="font-title absolute inset-0 flex items-center justify-center text-xl sm:text-3xl">
         <button>great!</button>
       </div>
       <div className="bg-[#666466] text-center h-[400px]"></div>
