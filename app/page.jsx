@@ -43,6 +43,7 @@ export default function Home() {
         // recognition.onerror = (event) => {
         //   console.error("Error occurred in recognition:", event.error);
         // };
+        // check
       } else {
         set(true)
         alert("Sorry, your browser doesn't support the Web Speech API.");
@@ -70,7 +71,7 @@ export default function Home() {
 
           <div className="font-title absolute inset-0 flex items-center justify-center text-xl sm:text-2xl">
             <button onClick={startListening}>
-              click it and say foo
+              click it and say "foo"
             </button>
             <p>{output}</p>
           </div>
